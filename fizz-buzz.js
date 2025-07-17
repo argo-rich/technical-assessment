@@ -8,7 +8,7 @@ export function getFizzBuzz() {
     for (let i = cg.startNum; i <= cg.endNum; i++) {
         if (containsAllDivisors(i)) 
             output += cg.allDivisorOutput + '\n';
-        else if (isADivisor(i)) 
+        else if (isDivisor(i)) 
             output += getDivisorOutput(i) + '\n';
         else 
             output += i + '\n';
@@ -25,7 +25,7 @@ function containsAllDivisors(num) {
     return true;
 }
 
-function isADivisor(num) {
+function isDivisor(num) {
     for (let div of cg.divisors)
         if (num % div.val === 0)
             return true;
