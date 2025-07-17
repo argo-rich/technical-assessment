@@ -38,5 +38,6 @@ function getDivisorOutput(num) {
     for (let div of cg.divisors)
         if (num % div.val === 0)
             output += div.text + ' ';
+        
     return output;
 }
